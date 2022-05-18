@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>OnTime! - Fichajes</title>
+    <link rel="stylesheet" href="css/Usuario.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="Fichaje_Usuario.html">OnTime!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Fichaje_Usuario.html">Fichaje</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Perfil_Usuario.html">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Faltas_Usuario.html">Ver Faltas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Historial_Usuario.html">Ver Historial</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <article>
+      <h2>Bienvenido a OnTime! (nombre de usuario)</h2>
+      <div class="cuadro">
+        <p id="demo"></p>
+        <div id="reloj"/>
+        </div>
+        <h1><time>00:00:00</time></h1>
+        <button id="strt">Empezar</button>
+        <button id="stp">Pausar</button>
+        <button id="acab">Acabar</button>
+        <button id="rst">Restaurar</button>
+
+
+
+    </article>
+    <footer class= "bg-danger">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="collapse navbar-collapse" id="navbarText2">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <!--insertar html de login--->
+              <a class="nav-link" href="#">Salir</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script>
+      document.getElementById("demo").innerHTML = "";
+
+//CONTADOR DE HORAS TRABAJADAS
+var h1 = document.getElementsByTagName('h1')[0];
+var start = document.getElementById('strt');
+var stop = document.getElementById('stp');
+var acabar = document.getElementById('acab');
+var reset = document.getElementById('rst');
+var sec = 0;
+var min = 0;
+var hrs = 0;
+var t;
+
+function tick(){
+    sec++;
+    if (sec >= 60) {
+        sec = 0;
+        min++;
+        if (min >= 60) {
+            min = 0;
+            hrs++;
+        }
+    }
+}
+function add() {
+    tick();
+    h1.textContent = (hrs > 9 ? hrs : "0" + hrs)
+        	 + ":" + (min > 9 ? min : "0" + min)
+       		 + ":" + (sec > 9 ? sec : "0" + sec);
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+
+timer();
+window.onload = clearTimeout(t);
+
+start.onclick = timer;
+stop.onclick = function() {
+    clearTimeout(t);
+    h1.textContent = hrs + ":" + min + ":" + sec + " horas trabajadas.";
+}
+acabar.onclick = function() {
+    clearTimeout(t);
+    h1.textContent = hrs + ":" + min + ":" + sec + " horas trabajadas.";
+}
+
+reset.onclick = function() {
+    h1.textContent = "00:00:00";
+    sec = 0; min = 0; hrs = 0;
+}
+
+//RELOJ ACTIVO
+      function muestraReloj() {
+    var fechaHora = new Date();
+    var horas = fechaHora.getHours();
+    var minutos = fechaHora.getMinutes();
+    var segundos = fechaHora.getSeconds();
+
+    if(horas < 10) { horas = '0' + horas; }
+    if(minutos < 10) { minutos = '0' + minutos; }
+    if(segundos < 10) { segundos = '0' + segundos; }
+
+    document.getElementById("reloj").innerHTML = 'Son las '+horas+':'+minutos;
+  }
+
+  window.onload = function() {
+    setInterval(muestraReloj, 1000);
+  }
+
+
+
+
+    </script>
+  </body>
+</html>
