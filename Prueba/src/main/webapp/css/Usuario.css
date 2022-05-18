@@ -1,0 +1,40 @@
+body {
+  background-image: url('/images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height:100vh;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+}
+h2 {
+  color: black;
+  text-align: center;
+}
+.cuadro {
+  border: 5px outset black;
+  background-color: white;
+  text-align: center;
+  height: 150px;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+footer {
+  text-align: right;
+  padding: 3px;
+  margin-top:auto;
+  color: white;
+  min-height:50px;
+}
+#navbarText2 {
+  position: absolute;
+  top: 150%;
+  left: 95%;
+  -ms-transform: translate(-95%, -95%);
+  transform: translate(-50%, -50%);
+}
