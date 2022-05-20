@@ -1,5 +1,5 @@
 body {
-  background-image: url('/images/fondo.jpg');
+  background-image: url('https://lexicdn.lexingtondowntownhotel.com/what-hotel-does-kim-kardashian-stay-at-in-new-york-.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -9,7 +9,11 @@ body {
   flex-direction:column;
 }
 h2 {
-  color: black;
+  color:white;
+  border-style: solid;
+  background-color: #43464B;
+  width: 25%;
+  margin-left: 37%;
   text-align: center;
 }
 h1 {
@@ -52,4 +56,3 @@ footer {
 #reloj {
   color: white;
 }
-
