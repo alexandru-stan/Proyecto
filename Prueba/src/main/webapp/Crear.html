@@ -68,7 +68,7 @@
   float:left;
 }
 #username{
-    margin-left:240px;
+    margin-left:252px;
 }
 #pass {
   width: 200px;
@@ -77,17 +77,29 @@
 #crear{
   margin-left:65%;
 }
+#txtmodi{
+margin-left:18em;
+}
 
   </style>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <a class="navbar-brand" href="Gestion.html">&nbsp;&nbsp;OnTime!</a>
+        <a class="navbar-brand">&nbsp;&nbsp;OnTime!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Cuentas.html">Cuentas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Sesiones.html">Sesiones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Faltas.html">Faltas</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link active" href="Crear.html">Crear</a>
             </li>
@@ -96,15 +108,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Borrar.html">Borrar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Cuentas.html">Cuentas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Faltas.html">Faltas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Sesiones.html">Sesiones</a>
             </li>
           </ul>
         </div>
@@ -116,8 +119,9 @@
       <h2 id="titulo">Crear cuenta</h2>
 <form action="..//ServletForm" method="POST">
    <div id="same">
+     <h6 id="txtmodi">Introduzca el nombre de usuario que desea modificar: </h6>
     <input type="text" class="form-control" id="name"  name="nombre" placeholder="Nombre" required>
-    <input type="text" class="form-control" id="secondname"  name="apellido" placeholder="Apellido" required>
+    <input type="text" class="form-control" id="secondname"  name="apellido" placeholder="Apellido" title="Introduzca un nombre" required>
   </div>
 <br></br>
   <div id="same">
@@ -151,7 +155,7 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <!--insertar html de login--->
-              <a class="nav-link" href="#">Salir</a>
+              <a class="nav-link" href="index.html">Salir</a>
             </li>
           </ul>
         </div>
