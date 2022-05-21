@@ -3,39 +3,96 @@
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="utf-8">
-    <title>OnTime! - Perfil</title>
+    <title>OnTime! - Faltas</title>
     <link rel="stylesheet" href="css/Usuario.css">
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <a class="navbar-brand" href="Fichaje_Usuario.html">OnTime!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="Fichaje_Usuario.html">Fichaje</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Perfil_Usuario.html">Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Faltas_Usuario.html">Ver Faltas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Historial_Usuario.html">Ver Historial</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+         <a class="navbar-brand" href="Fichaje_Usuario.html">&nbsp; OnTime!</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+           <ul class="margen-down navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+               <a class="nav-link" href="Fichaje_Usuario.html">Fichaje</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link " href="Perfil_Usuario.html">Perfil</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" href="Faltas_Usuario.html">Ver Faltas</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="Historial_Usuario.html">Ver Historial</a>
+             </li>
+           </ul>
+         </div>
+       </nav>
 
     </header>
     <article>
+      &nbsp;
+      <h2>Faltas</h2>
+
+    <div class="cuadrohistorial">
+      <table class="table table-striped table-bordered table-hover table-dark">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Justificaci&oacuten</th>
+            <th>Motivo</th>
+            <th>Solicitar</th>
+          </tr>
+        <tbody>
+          <tr>
+            <td>(fecha almacenada bbdd)</td>
+            <td>(Si/No)</td>
+            <td>(motivo)</td>
+            <td><form>
+              <input type="text" placeholder="Escribe el motivo" id="motivo">
+              <button type="submit" class="btn btn-danger">Solicitud</button>
+              <input type="hidden" id="IdFaltas" name="IdFaltas" value="69690">
+            </form></td>
+          </tr>
+          <tr>
+            <td>(fecha almacenada bbdd)</td>
+            <td>S&iacute</td>
+            <td>Auuuuuuu!</td>
+            <td>-(desaparece al estar justificada)</td>
+          </tr>
+          <tr>
+            <td>(fecha almacenada bbdd)</td>
+            <td>(Si/No)</td>
+            <td>(motivo)</td>
+            <td><form>
+              <input type="text" placeholder="Escribe el motivo" id="motivo">
+              <button type="submit" class="btn btn-danger">Solicitud</button>
+              <input type="hidden" id="IdFaltas" name="IdFaltas" value="69691">
+            </form></td>
+          </tr>
+          <tr>
+            <td>(fecha almacenada bbdd)</td>
+            <td>(Si/No)</td>
+            <td>(motivo)</td>
+            <td><form>
+              <input type="text" placeholder="Escribe el motivo" id="motivo">
+              <button type="submit" class="btn btn-danger">Solicitud</button>
+              <input type="hidden" id="IdFaltas" name="IdFaltas" value="69692">
+            </form></td>
+          </tr>
+
+        </thead>
+      </table>
+    </div>
+  		</article>
 
 
-      <h1>(FALTAS)</h1>
+
+      </section>
+
 
 
 
@@ -48,13 +105,14 @@
         <div class="collapse navbar-collapse" id="navbarText2">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <!--insertar html de login--->
-              <a class="nav-link" href="#">Salir</a>
+              <a class="nav-link" href="login.html">Salir</a>
             </li>
           </ul>
         </div>
       </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
   </body>
 </html>
+
