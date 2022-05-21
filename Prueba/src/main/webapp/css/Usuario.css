@@ -24,7 +24,7 @@ h1 {
   background-color: #43464B;
   border-color: grey;
   text-align: center;
-  height: 150px;
+  height: 200px;
   width: 40%;
   position: absolute;
   top: 50%;
@@ -55,4 +55,79 @@ footer {
 }
 #reloj {
   color: white;
+}
+.cuadroperfil {
+margin-top:4em;
+background-color:#43464B;
+border-radius:0%;
+padding:5%;
+margin-left: 20%;
+margin-right: 20%;
+box-shadow: 5px 5px 2px #37393d;
+}
+h5{
+  color:white;
+  background-color: #43464B;
+  box-shadow: 4px 4px 1px #37393d;
+  width: 50%;
+
+}
+
+#txtmodi{
+margin-left:0em;
+}
+.logoP {
+margin-top:4em;
+padding:10%;
+margin-left: 18%;
+margin-right: 0%;
+  width: 20%;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 10%;
+}
+
+.imagen {
+  padding: 5px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cuadrofaltas {
+  margin-top:2em;
+  background-color:#43464B;
+  border-radius:0%;
+  padding:5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 5px 5px 2px #37393d;
+  height: 400px;
+  width: 80%;
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cuadrohistorial {
+  margin-top:2em;
+  background-color:#43464B;
+  padding:2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 5px 5px 2px #37393d;
+  height: 400px;
+  width: 80%;
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
