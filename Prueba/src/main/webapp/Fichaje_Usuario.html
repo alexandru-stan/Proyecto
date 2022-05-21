@@ -51,14 +51,17 @@
         <button id="acab" type="submit" class="btn btn-dark">Acabar</button>
         <input type="hidden" id="IdContador" name="IdContador" value="89536">
       </form>
+      <!--<input id="user" value="User name here">
+<button id="button">Copy value</button>
+<br>
+<span id="copied"></span>-->
     </article>
     <footer class= "bg-danger">
       <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="collapse navbar-collapse" id="navbarText2">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <!--insertar html de login--->
-              <a class="nav-link" href="#">Salir</a>
+              <a class="nav-link" href="login.html">Salir</a>
             </li>
           </ul>
         </div>
@@ -136,9 +139,20 @@ acabar.onclick = function() {
   window.onload = function() {
     setInterval(muestraReloj, 1000);
   }
+/*
+//IMPRIMIR HORAS TRABAJADAS
+document.getElementById('button').addEventListener('click', inputCopied);
 
+function inputCopied() {
+  var user = document.getElementById('user');
+  var copied = document.getElementById('copied');
 
-
+  copied.textContent = user.value;
+  //Or
+  //copied.innerHTML = user.value;
+}
+*/
+//GUARDAR VALOR RELOJ
 
     </script>
   </body>
