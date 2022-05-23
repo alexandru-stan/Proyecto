@@ -25,26 +25,28 @@ background-color:#43464B;
 border-radius:5%;
 padding:3%;
 box-shadow: 10px 10px 4px #37393d;
+margin-left:25%;
+margin-right:25%;
 }
 
 input[type=text] {
   width: 200px;
-  margin-left:15%;
+  margin-left:35%;
 
 }
 input[type=text]:hover {
   width: 200px;
-  margin-left:15%;
+  margin-left:35%;
   box-shadow: 3px 3px 0px white;
 }
 
 input[type=password] {
   width: 200px;
-  margin-left:15%;
+  margin-left:35%;
 }
 input[type=password]:hover {
   width: 200px;
-  margin-left:15%;
+  margin-left:35%;
   box-shadow: 3px 3px 0px white;
 }
 
@@ -92,7 +94,7 @@ h6{
 
 <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 <!--T-->
-<div class="col-3 container">
+<div>
 
   <form action="ServletLogin" method="POST">
 
@@ -107,18 +109,18 @@ h6{
               <select name="Points" size="1" id="Points">
                 <option value="5" selected>Usuario</option>
                 <option value="10">Administrador</option>
-                
+
               </select>
 
 </div>
 
-    <div class="-xs-3 mt-3">
-      <input type="text" class="form-control "  name="username" placeholder="Usuario" required>
+    <div class="mt-3">
+      <input type="text" class="form-control "  name="username" placeholder="Usuario" required title="Introduzca el nombre de usuario">
     </div>
 
 
-    <div class="-xs-3 mt-3">
-      <input type="password" class="form-control"  name="password"  placeholder="Contrase&ntilde;a" required>
+    <div class="mt-3">
+      <input type="password" class="form-control"  name="password"  placeholder="Contrase&ntilde;a" required title="Introduzca la contrase&ntilde;a">
     </div>
 
     </div>
@@ -139,3 +141,4 @@ h6{
 </body>
 
 </html>
+
