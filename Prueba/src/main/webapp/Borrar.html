@@ -82,7 +82,7 @@
 <form action="..//ServletForm" method="POST">
   <div id="same">
   <h6 id="txtmodi">Introduzca el nombre de usuario que desea borrar: </h6>
-  <input type="text" class="form-control" id="username1"  name="username" placeholder="Nombre Usuario" title="Introduzca un nombre de usuario" required>
+  <input type="text" class="form-control" id="username1"  name="username" placeholder="Nombre Usuario" title="3 a 20 caracteres, un dígito, una minúscula y una mayúscula" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{3,20}$">
   </div>
 <br></br>
   <div id="same" class="mt-3">
