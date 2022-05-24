@@ -84,6 +84,9 @@
   #txtdatos{
   margin-left:26em;
   }
+  #despegable{
+    margin-left:43%;
+  }
   </style>
   <body>
     <header>
@@ -123,30 +126,33 @@
   <form action="..//ServletForm" method="POST">
     <div id="same">
     <h6 id="txtmodi">Introduzca el nombre de usuario que desea modificar: </h6>
-    <input type="text" class="form-control" id="username1"  name="username" placeholder="Nombre Usuario" title="Introduzca un nombre de usuario" required>
+    <input type="text" class="form-control" id="username1"  name="username" placeholder="Nombre Usuario" title="3 a 20 caracteres, un dígito, una minúscula y una mayúscula" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{3,20}$">
     </div>
 <br></br>
 <br>
     <div id="same">
     <h6 id="txtdatos">Datos a modificar: </h6>
-     <input type="text" class="form-control" id="name"  name="nombre" placeholder="Nombre" title="Introduzca nuevo nombre" required>
-     <input type="text" class="form-control" id="secondname"  name="apellido" placeholder="Apellido" title="Introduzca nuevo apellido" required>
+     <input type="text" class="form-control" id="name"  name="nombre" placeholder="Nombre" title="Introduzca nuevo nombre (2-20)" required pattern="[A-Za-z]{2,20}">
+     <input type="text" class="form-control" id="secondname"  name="apellido" placeholder="Apellido" title="Introduzca nuevo apellido (2-20)" required pattern="[A-Za-z]{2,20}">
     </div>
     <br></br>
     <div id="same">
-     <input type="text" class="form-control" id="username"  name="username" placeholder="Nombre Usuario" title="Introduzca nuevo nombre de usuario" required>
-     <input type="password" class="form-control" id="pass"  name="pass" placeholder="Contraseña" title="Introduzca nueva contraseña" required>
+     <input type="text" class="form-control" id="username"  name="username" placeholder="Nombre Usuario" title="3 a 20 caracteres, un dígito, una minúscula y una mayúscula" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{3,20}$">
+     <input type="password" class="form-control" id="pass"  name="pass" placeholder="Contraseña" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" title="8 a 16 caracteres, un dígito, una minúscula y una mayúscula">
      </div>
     <br></br>
      <div id="same">
-     <input type="text" class="form-control" id="nif"  name="nif" placeholder="NIF" title="Introduzca nuevo NIF" required>
-     <input type="tel" class="form-control" id="tel"  name="telefono" placeholder="Teléfono" title="Introduzca nuevo teléfono" required>
+     <input type="text" class="form-control" id="nif"  name="nif" placeholder="NIF"  required pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" title="Introduzca nuevo NIF (Letra+7Números+Letra || 8Números+Letra)">
+     <input type="tel" class="form-control" id="tel"  name="telefono" placeholder="Teléfono" title="Introduzca nuevo teléfono" required pattern="[0-9]{9}" title="Introduzca nuevo teléfono (9 digitos)">
      </div>
     <br></br>
     <div>
     <h6>Administrador</h6>
-    <label><input id="radio1" type="radio" name="admin">&nbspSi</label>
-    <label><input  id="radio2" type="radio" name="admin">&nbspNo</label>
+    <select id="despegable" name="tipo" size="1" id="Points">
+                   <option id="opcion" value="usuario" selected>Si</option>
+                   <option id="opcion" value="administrador">No</option>
+
+                 </select>
     </div>
 
     <div id="same" class="mt-3">
