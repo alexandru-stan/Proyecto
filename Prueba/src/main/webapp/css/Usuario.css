@@ -11,6 +11,7 @@ body {
 h2 {
   color:white;
   border-style: solid;
+  box-shadow: 4px 4px 1px #37393d;
   background-color: #43464B;
   width: 25%;
   margin-left: 37%;
@@ -118,6 +119,21 @@ margin-right: 0%;
   position: absolute;
   top: 55%;
   left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cuadrocuentas {
+  margin-top:2em;
+  background-color:#43464B;
+  padding:2%;
+  margin-left: 10%;
+  margin-right: 0%;
+  box-shadow: 5px 5px 2px #37393d;
+  height: 520px;
+  width: 95%;
+  position: absolute;
+  top: 55%;
+  left: 40%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
