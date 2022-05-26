@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>OnTime! - Fichajes</title>
+    <link rel="stylesheet" href="css/Usuario.css">
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+         <a class="navbar-brand" href="Fichaje_Usuario.html">&nbsp; OnTime!</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+           <ul class="margen-down navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+               <a class="nav-link active" href="Fichaje_Usuario.html">Fichaje</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="Perfil_Usuario.html">Perfil</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="Faltas_Usuario.html">Ver Faltas</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="Historial_Usuario.html">Ver Historial</a>
+             </li>
+           </ul>
+         </div>
+       </nav>
+
+    </header>
+    <article>
+      &nbsp;
+      <h2>Bienvenido a OnTime!</h2>
+      &nbsp;
+      <div class="cuadro">
+        <p id="demo"></p>
+        <div id="reloj"/>
+      </div>
+      <h1><time>00:00:00</time></h1>
+      <button id="strt" class="btn btn-danger">Empezar</button>
+      <button id="stp" class="btn btn-secondary">Pausar</button>
+      <form action="/Fichaje_Usuario.html" method="POST">
+      <!--  <input id="acab" type="submit" value='Acabar' class="btn btn-dark"></input>
+        <input type="text" id="IdContador" name="IdContador"> -->
+        -
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      <form >
+
+      </form>
+    <!--  <form action="/savedata" method="post" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded">
+<input type="text" name="name" />
+<input type="text" name="lastName" />
+<input type="submit" />
+</form>-->
+
+      <!--<input id="user" value="User name here">
+<button id="button">Copy value</button>
+<br>
+<span id="copied"></span>-->
+    </article>
+    <footer class= "bg-danger fixed-bottom">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="collapse navbar-collapse" id="navbarText2">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <button id="stp" class="btn btn-secondary">Pausar</button
+              <a class="nav-link" href="index.html">Salir</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById("demo").innerHTML = "";
+
+//CONTADOR DE HORAS TRABAJADAS
+var h1 = document.getElementsByTagName('h1')[0];
+var start = document.getElementById('strt');
+var stop = document.getElementById('stp');
+var acabar = document.getElementById('acab');
+//var reset = document.getElementById('rst');
+var sec = 0;
+var min = 0;
+var hrs = 0;
+var t;
+
+function tick(){
+    sec++;
+    if (sec >= 60) {
+        sec = 0;
+        min++;
+        if (min >= 60) {
+            min = 0;
+            hrs++;
+        }
+    }
+}
+function add() {
+    tick();
+    h1.textContent = (hrs > 9 ? hrs : "0" + hrs)
+        	 + ":" + (min > 9 ? min : "0" + min)
+       		 + ":" + (sec > 9 ? sec : "0" + sec);
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+
+timer();
+window.onload = clearTimeout(t);
+
+start.onclick = timer;
+stop.onclick = function() {
+    clearTimeout(t);
+    h1.textContent = (hrs > 9 ? hrs : "0" + hrs)
+        	 + ":" + (min > 9 ? min : "0" + min)
+       		 + ":" + (sec > 9 ? sec : "0" + sec) + " horas trabajadas.";
+}
+acabar.onclick = function() {
+    clearTimeout(t);
+    h1.textContent = (hrs > 9 ? hrs : "0" + hrs)
+        	 + ":" + (min > 9 ? min : "0" + min)
+       		 + ":" + (sec > 9 ? sec : "0" + sec) + " horas trabajadas.";
+}
+
+/*reset.onclick = function() {
+    h1.textContent = "00:00:00";
+    sec = 0; min = 0; hrs = 0;
+}*/
+
+//RELOJ ACTIVO
+      function muestraReloj() {
+    var fechaHora = new Date();
+    var horas = fechaHora.getHours();
+    var minutos = fechaHora.getMinutes();
+    var segundos = fechaHora.getSeconds();
+
+    if(horas < 10) { horas = '0' + horas; }
+    if(minutos < 10) { minutos = '0' + minutos; }
+    if(segundos < 10) { segundos = '0' + segundos; }
+
+    document.getElementById("reloj").innerHTML = 'Son las '+horas+':'+minutos;
+  }
+
+  window.onload = function() {
+    setInterval(muestraReloj, 1000);
+  }
+/*
+//IMPRIMIR HORAS TRABAJADAS
+document.getElementById('button').addEventListener('click', inputCopied);
+function inputCopied() {
+  var user = document.getElementById('user');
+  var copied = document.getElementById('copied');
+  copied.textContent = user.value;
+  //Or
+  //copied.innerHTML = user.value;
+}
+*/
+//GUARDAR VALOR RELOJ
+
+doThis = function(hiddenData) {
+  console.log(hiddenData.value) //logs ABC123
+}
+/*def save = Action { implicit request =>
+//here handle params from html form,
+//this will return Option[Map[String,ArrayBuffer]]
+val optionMap = request.body.asFormUrlEncoded
+println(optionMap)
+//saving things here
+Ok("saved")*/
+
+    </script>
+  </body>
+</html>
