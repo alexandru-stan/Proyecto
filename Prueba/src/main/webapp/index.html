@@ -30,53 +30,46 @@ box-shadow: 10px 10px 4px #37393d;
 margin-left:35%;
 margin-right:40%;
 display: inline-block;
-width: 25%;
+width: 30%;
+
 }
 
 input[type=text] {
-  width: 70%;
-  margin-left:15%;
+  width: 60%;
+  margin-left:17%;
 
 }
 input[type=text]:hover {
-  width: 70%;
-  margin-left:15%;
+  width: 60%;
+  margin-left:17%;
   box-shadow: 3px 3px 0px white;
 
 }
 
 input[type=password] {
-  width: 70%;
-  margin-left:15%;
+  width: 60%;
+  margin-left:17%;
 
 }
 input[type=password]:hover {
-  width: 70%;
-  margin-left:15%;
+  width: 60%;
+  margin-left:17%;
   box-shadow: 3px 3px 0px white;
 
 }
-input[type=password]:hover {
-  width: 70%;
-  margin-left:15%;
-  box-shadow: 3px 3px 0px white;
+
+
+#boton{
+margin-left:15%;
+width: 60%;
+font-size:1vw;
+
 
 }
-select[id=despegable]{
-width: 40%;
-}
-button[id=iniciar]{
-  margin-left: 14%;
-}
-#button{
-width: 30%;
-font-size: 1vw;
-}
-
 
 #admin{
   color: white;
-margin-left:15%;
+margin-left:19%;
 }
 
 #usu{
@@ -87,7 +80,8 @@ margin-left:15%;
 
 #titulo{
   color: white;
-  margin-left:22%;
+  margin-left:10%;
+  text-align: center;
 }
 
 
@@ -100,10 +94,19 @@ h6{
   color: white;
   background-color: #ff333d;
   border-radius:3%;
+  width: 50%;
+
 }
 #opcion{
   color: white;
   background-color: darkgrey;
+}
+#ontime {
+
+}
+
+label {
+  text-align: center;
 }
 
   </style>
@@ -125,29 +128,29 @@ h6{
 
   <form action="ServletLogin" method="POST">
 
-    <div class="row">
+    <div class="row" style="margin-top:5%">
 
       <div id="ontime">
-    <h1 id="titulo" style="font-size:3vw;">OnTime!<h1>
+    <h1 id="titulo" style="font-size:4vw;">OnTime!<h1>
       </div>
 <div class="mt-3">
 
-    <label style="color:white" for="Points">Vas a acceder como:</label>
-            <select id="despegable" name="Points" size="1" id="Points">
+    <label  style="color:white" for="Points">Vas a acceder como:</label>
+              <select id="despegable" name="Points" size="1" id="Points">
                 <option id="opcion" value="5" selected>Usuario</option>
                 <option id="opcion" value="10">Administrador</option>
 
-            </select>
+              </select>
 
 </div>
 
     <div class="mt-3">
-      <input type="text" class="form-control "  name="username" placeholder="Usuario" required  pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{3,20}$" title="3 a 20 car&aacute;cteres, un d&iacute;gito, una min&uacute;scula y una may&uacute;scula">
+      <input type="text" class="form-control "  name="username" placeholder="Usuario" required title="Introduzca el nombre de usuario">
     </div>
 
 
     <div class="mt-3">
-      <input type="password" class="form-control"  name="password"  placeholder="Contrase&ntilde;a" required  pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" title="8 a 16 car&aacute;cteres, un d&iacute;gito, una min&uacute;scula y una may&uacute;scula">
+      <input type="password" class="form-control"  name="password"  placeholder="Contrase&ntilde;a" required title="Introduzca la contrase&ntilde;a">
     </div>
 
     </div>
@@ -155,7 +158,7 @@ h6{
 
 
     <div id="boton" class="mt-4">
-    <button id="iniciar" type="submit" class="btn btn-danger">Entrar</button>
+    <button  type="submit" class="btn btn-danger" >Entrar</button>
     </div>
 
   </form>
