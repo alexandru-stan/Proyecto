@@ -110,11 +110,15 @@ window.onload = clearTimeout(t);
 start.onclick = timer;
 stop.onclick = function() {
     clearTimeout(t);
-    h1.textContent = hrs + ":" + min + ":" + sec + " horas trabajadas.";
+    h1.textContent = (hrs > 9 ? hrs : "0" + hrs)
+        	 + ":" + (min > 9 ? min : "0" + min)
+       		 + ":" + (sec > 9 ? sec : "0" + sec) + " horas trabajadas.";
 }
 acabar.onclick = function() {
     clearTimeout(t);
-    h1.textContent = hrs + ":" + min + ":" + sec + " horas trabajadas.";
+    h1.textContent = (hrs > 9 ? hrs : "0" + hrs)
+        	 + ":" + (min > 9 ? min : "0" + min)
+       		 + ":" + (sec > 9 ? sec : "0" + sec) + " horas trabajadas.";
 }
 
 /*reset.onclick = function() {
