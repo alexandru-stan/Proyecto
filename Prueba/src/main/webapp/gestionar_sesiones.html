@@ -12,17 +12,6 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   </head>
   <style>
-  form {
-  margin-top:4em;
-  background-color:#43464B;
-  border-radius:0%;
-  padding:15%;
-  margin-left: 10%;
-  margin-right: 10%;
-  box-shadow: 5px 5px 2px #37393d;
-  display: inline-block;
-  }
-
   h2{
     color:white;
     box-shadow: 4px 4px 1px #37393d;
@@ -67,23 +56,47 @@
     <article>
       &nbsp;
       <h2>Consultar sesiones</h2>
-<form action="..//ServletForm" method="POST">
+      <div class="cuadrohistorial">
+        <form class="usuario">
+          <input type="text" placeholder="Usuario" id="sesiones">
+          <button type="submit" class="btn btn-danger">Buscar</button>
+          <input type="hidden" id="faltashidden" name="faltashidden">
+        </form>
+        <table class="table table-striped table-bordered table-hover table-dark">
+          <thead>
+            <tr>
+              <th>Fecha de sesi&oacuten</th>
+              <th>Horas trabajadas</th>
+            </tr>
+          <tbody>
+            <tr>
+              <td>(fecha almacenada bbdd)</td>
+              <td>(horas almacenadas bbdd)</td>
+            </tr>
+            <tr>
+              <td>(fecha almacenada bbdd)</td>
+              <td>(horas almacenadas bbdd)</td>
+            </tr>
+            <tr>
+              <td>(fecha almacenada bbdd)</td>
+              <td>(horas almacenadas bbdd)</td>
+            </tr>
+            <tr>
+              <td>(fecha almacenada bbdd)</td>
+              <td>(horas almacenadas bbdd)</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
 
-</form>
 
 
     </article>
-    <footer class= "bg-danger">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <div class="collapse navbar-collapse" id="navbarText2">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <!--insertar html de login--->
-              <a class="nav-link" href="index.html">Salir</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <footer class= "bg-danger fixed-bottom">
+      <nav class="navbar fixed-bottom navbar-dark bg-danger">
+      <a class="navbar-brand"></a>
+      <a class="btn btn-danger" type="button" href="/index.html">Salir &nbsp; &nbsp;</a>
+    </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
