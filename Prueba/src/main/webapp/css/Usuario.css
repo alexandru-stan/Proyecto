@@ -25,7 +25,7 @@ h1 {
   background-color: #43464B;
   border-color: grey;
   text-align: center;
-  height: 200px;
+  height: 212px;
   width: 40%;
   position: absolute;
   top: 50%;
@@ -45,7 +45,7 @@ footer {
   padding: 3px;
   margin-top:auto;
   color: white;
-  min-height:50px;
+  min-height:40px;
 }
 #navbarText2 {
   position: absolute;
@@ -65,6 +65,7 @@ padding:5%;
 margin-left: 20%;
 margin-right: 20%;
 box-shadow: 5px 5px 2px #37393d;
+width: 55%;
 }
 h5{
   color:white;
@@ -136,4 +137,8 @@ margin-right: 0%;
   left: 40%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.usuario {
+  text-align: center
 }
